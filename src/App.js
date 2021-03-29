@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+
+import React, { useState } from 'react';
+import Tarjeta from './tarjeta.js';
 import './App.css';
 
 function App() {
+  let titulo = <h1>Pepo titulo</h1>
+  let tituloTarjeta = titulo
+  const[mostrarTituloApp, setMostrarTitulo] = useState(true)
+
+  const handelClick = () => {
+    console.log("tocaste ocultar titulo")
+    setMostrarTitulo(false)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <div>
+        {mostrarTituloApp === true &&
+          <Tarjeta
+            tituloTarjeta={tituloTarjeta}
+
+          />
+        }
+      </div>
+      <button onClick={handelClick}>Ocultar titulo</button>
+    </>
+
   );
 }
 
