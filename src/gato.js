@@ -1,11 +1,11 @@
 
 import React, { useState } from 'react';
 
-const Tarjeta = ({tituloTarjeta}) => {
-
+const Tarjeta = ({gato}) => {
+    console.log (gato)
 
 return(
-tituloTarjeta
+<h1>Hola</h1>
     )
 }
 

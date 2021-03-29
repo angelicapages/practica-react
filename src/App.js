@@ -1,31 +1,25 @@
 
 import React, { useState } from 'react';
-import Tarjeta from './tarjeta.js';
+import Tarjeta from './gato.js';
 import './App.css';
 
 function App() {
-  let titulo = <h1>Pepo titulo</h1>
-  let tituloTarjeta = titulo
-  const[mostrarTituloApp, setMostrarTitulo] = useState(true)
-
-  const handelClick = () => {
-    console.log("tocaste ocultar titulo")
-    setMostrarTitulo(false)
+  const gato = {
+    nombre: "Garfield",
+    color: "naranja", 
+    edad: 12, 
+    comeLasagna: true,
+    amigos: ["Odie", "Jon"],
+    img: "https://media.historiahoy.com.ar/adjuntos/231/imagenes/000/033/0000033260.jpg"
   }
-
   return (
     <>
-
-      <div>
-        {mostrarTituloApp === true &&
-          <Tarjeta
-            tituloTarjeta={tituloTarjeta}
-
-          />
-        }
-      </div>
-      <button onClick={handelClick}>Ocultar titulo</button>
-    </>
+gato.map=(({
+<Tarjeta
+gato= {gato}
+/>
+})
+</>
 
   );
 }
